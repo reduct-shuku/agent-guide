@@ -1,14 +1,13 @@
 {
   "schema_version": 1,
   "name": "agent-guide",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "repository": "https://github.com/reduct-shuku/agent-guide",
   "ref": "main",
   "path": ".",
   "contributing": "CONTRIBUTING.md",
   "changes": [
-    "首个阶段版本：7 页核心课程，覆盖 Agent 基本概念、六个模块框架、运行闭环，以及感知与规划两个模块页。",
-    "移除每页底部的“本页要点”条，页面内容更聚焦于当前问题。"
+    "冗余页面的修改"
   ],
   "title": "Agent概念入门",
   "description": "介绍Agent的基本概念和基本模块框架。",
