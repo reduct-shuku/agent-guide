@@ -4,7 +4,7 @@
 
 ## 来源与范围
 
-先读取同目录 shuku.json 的 repository、ref、path、version。当前 repository 尚未配置；必须由课程维护者提供实际仓库后才能检查更新或发起贡献。不得使用 Shuku 格式模板仓库作为本课程的来源。
+先读取同目录 shuku.json 的 repository、ref、path、version。当前 repository 为 https://github.com/reduct-shuku/agent-guide。检查更新或发起贡献时以该仓库为准，不得使用 Shuku 格式模板仓库作为本课程的来源。
 
 不假定 Skill 安装目录是 Git 仓库。在独立临时目录获取目标仓库指定 ref，以当前安装版本为基准识别本课程的修改；排除其他课程、凭据、运行日志、缓存和构建产物。发现来源信息矛盾或远程冲突时，向用户说明并等待处理。
 
