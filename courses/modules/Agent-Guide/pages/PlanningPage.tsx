@@ -17,12 +17,12 @@ interface PlanNode {
 }
 
 const nodes: PlanNode[] = [
-  { id: 'goal', title: '明确评审目标', slot: '本周一', hours: 0.5, deps: [], output: '一页评审目标与成功标准', x: 130, y: 215, parallel: false },
-  { id: 'data', title: '收集使用数据', slot: '周二', hours: 1.5, deps: ['明确评审目标'], output: '近 30 天核心指标与异常点', x: 330, y: 105, parallel: true },
-  { id: 'feedback', title: '整理客户反馈', slot: '周二', hours: 1, deps: ['明确评审目标'], output: '按主题归类的 12 条反馈', x: 330, y: 325, parallel: true },
-  { id: 'deck', title: '制作评审材料', slot: '周三', hours: 2, deps: ['收集使用数据', '整理客户反馈'], output: '20 页评审稿与数据附录', x: 530, y: 215, parallel: false },
-  { id: 'rehearsal', title: '内部预演', slot: '周四', hours: 1, deps: ['制作评审材料'], output: '问题清单与修改记录', x: 720, y: 105, parallel: true },
-  { id: 'send', title: '发送会议材料', slot: '周四', hours: 0.2, deps: ['制作评审材料'], output: '会议邀请与预读包', x: 720, y: 325, parallel: true },
+  { id: 'goal', title: '明确评审目标', slot: '本周一', hours: 0.5, deps: [], output: '一页评审目标与成功标准', x: 130, y: 306, parallel: false },
+  { id: 'data', title: '收集使用数据', slot: '周二', hours: 1.5, deps: ['明确评审目标'], output: '近 30 天核心指标与异常点', x: 330, y: 112, parallel: true },
+  { id: 'feedback', title: '整理客户反馈', slot: '周二', hours: 1, deps: ['明确评审目标'], output: '按主题归类的 12 条反馈', x: 330, y: 500, parallel: true },
+  { id: 'deck', title: '制作评审材料', slot: '周三', hours: 2, deps: ['收集使用数据', '整理客户反馈'], output: '20 页评审稿与数据附录', x: 530, y: 306, parallel: false },
+  { id: 'rehearsal', title: '内部预演', slot: '周四', hours: 1, deps: ['制作评审材料'], output: '问题清单与修改记录', x: 720, y: 112, parallel: true },
+  { id: 'send', title: '发送会议材料', slot: '周四', hours: 0.2, deps: ['制作评审材料'], output: '会议邀请与预读包', x: 720, y: 500, parallel: true },
 ];
 
 const edges: Array<[string, string]> = [['goal', 'data'], ['goal', 'feedback'], ['data', 'deck'], ['feedback', 'deck'], ['deck', 'rehearsal'], ['deck', 'send']];
@@ -48,7 +48,7 @@ export function PlanningPage() {
             <span className={`ag-tag${parallel ? ' ag-tag-green' : ''}`}>{parallel ? '关键路径 5.2 小时' : '总耗时 6.2 小时'}</span>
           </div>
           <div className="pl-canvas">
-            <svg viewBox="0 0 800 430" className="pl-lines" aria-hidden="true">
+            <svg viewBox="0 0 800 612" className="pl-lines" aria-hidden="true">
               <defs>
                 <marker id="pl-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
                   <path d="M0 0 8 4 0 8Z" fill="#9fb3ca" />

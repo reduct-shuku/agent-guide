@@ -52,17 +52,17 @@ export function TheLoopPage() {
       <div className="tl-main">
         <section className="tl-diagram" aria-label="循环示意图">
           <div className="tl-ring">
-            <svg className="tl-ring-lines" viewBox="0 0 380 380" aria-hidden="true">
-              <circle cx="190" cy="190" r="126" fill="none" stroke="#ccdaea" strokeWidth="1.5" strokeDasharray="6 7" />
-              <path d="M190 64v-8M190 316v8M64 190h-8M316 190h8" stroke="#b9c9dd" strokeWidth="1.5" />
-              <path d="m300 96 6-4-1 7" fill="none" stroke="#b9c9dd" strokeWidth="1.5" />
+            <svg className="tl-ring-lines" viewBox="0 0 470 470" aria-hidden="true">
+              <circle cx="235" cy="235" r="210" fill="none" stroke="#ccdaea" strokeWidth="1.6" strokeDasharray="7 8" />
+              <path d="M235 14v11M235 445v11M14 235h11M445 235h11" stroke="#b9c9dd" strokeWidth="1.6" />
+              <path d="m392 96 8-5-1 9" fill="none" stroke="#b9c9dd" strokeWidth="1.6" />
             </svg>
             {phases.map((item, index) => {
               const pos = [
-                { left: '50%', top: '14%' },
-                { left: '86%', top: '50%' },
-                { left: '50%', top: '86%' },
-                { left: '14%', top: '50%' },
+                { left: '50%', top: '10%' },
+                { left: '90%', top: '50%' },
+                { left: '50%', top: '90%' },
+                { left: '10%', top: '50%' },
               ][index];
               return (
                 <div

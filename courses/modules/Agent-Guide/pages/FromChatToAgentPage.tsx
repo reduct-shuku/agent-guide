@@ -50,26 +50,25 @@ export function FromChatToAgentPage() {
       subtitle="问法完全一样。一个停在建议，一个把建议变成结果——差别不在回答质量，而在是否为结果负责。"
     >
       <div className="fca-main">
-        <section className="fca-tasks" aria-label="选择任务">
-          <Typography variant="bodySmall" tone="muted" className="fca-section-label">选择一个任务</Typography>
+        <div className="fca-tabs" role="tablist" aria-label="选择任务">
           {tasks.map((item, index) => (
             <button
               key={item.id}
               type="button"
+              role="tab"
+              aria-selected={item.id === activeId}
               className={`fca-task${item.id === activeId ? ' is-active' : ''}`}
               onClick={() => setActiveId(item.id)}
-              aria-pressed={item.id === activeId}
             >
               <span className="fca-task-index"><Typography as="span" variant="bodySmall" tone="inherit">{String(index + 1).padStart(2, '0')}</Typography></span>
-              <Icon kind={item.icon} size={20} />
-              <Typography as="span" variant="body" tone="inherit" className="fca-task-name">{item.label}</Typography>
-              <Icon kind="arrow" size={16} className="fca-task-arrow" />
+              <span className="fca-task-copy">
+                <Typography as="span" variant="body" tone="inherit" className="fca-task-name">{item.label}</Typography>
+                <Typography as="span" variant="bodySmall" tone="muted" className="fca-task-request">{item.request}</Typography>
+              </span>
+              <Icon kind={item.icon} size={22} className="fca-task-icon" />
             </button>
           ))}
-          <div className="fca-side-note">
-            <Typography variant="bodySmall" tone="muted">两者可以调用同一个大模型。差异来自模型之外：有没有工具、有没有状态、能不能进入下一轮。</Typography>
-          </div>
-        </section>
+        </div>
 
         <section className="fca-stage" aria-live="polite">
           <div className="fca-panel fca-panel-chat">
@@ -108,7 +107,7 @@ export function FromChatToAgentPage() {
           </div>
 
           <div className="fca-divider" aria-hidden="true">
-            <Icon kind="arrow" size={20} />
+            <Icon kind="arrow" size={22} />
           </div>
 
           <div className="fca-panel fca-panel-agent">
@@ -138,6 +137,11 @@ export function FromChatToAgentPage() {
             </div>
           </div>
         </section>
+
+        <div className="fca-note">
+          <Icon kind="brain" size={17} />
+          <Typography variant="bodySmall" tone="muted">两者可以调用同一个大模型。差异来自模型之外：有没有工具、有没有状态、能不能进入下一轮。</Typography>
+        </div>
       </div>
     </AgentPage>
   );
