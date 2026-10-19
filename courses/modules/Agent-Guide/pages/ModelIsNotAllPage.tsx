@@ -72,12 +72,12 @@ export function ModelIsNotAllPage() {
               </div>
             ))}
           </div>
-          {!connected && (
-            <div className="mna-gate">
-              <Icon kind="key" size={15} />
-              <Typography as="span" variant="bodySmall" tone="muted">工具与状态尚未接入，链路停在这里</Typography>
-            </div>
-          )}
+          <div className={`mna-gate${connected ? ' is-on' : ''}`}>
+            <Icon kind={connected ? 'check' : 'key'} size={15} />
+            <Typography as="span" variant="bodySmall" tone={connected ? 'success' : 'muted'}>
+              {connected ? '工具与状态已接入，链路可以继续运行' : '工具与状态尚未接入，链路停在这里'}
+            </Typography>
+          </div>
         </section>
       </div>
 

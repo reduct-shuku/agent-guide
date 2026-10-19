@@ -29,10 +29,11 @@ const modules: ModuleInfo[] = [
 export function SixModulesPage() {
   const [activeId, setActiveId] = useState(modules[0].id);
   const active = modules.find(item => item.id === activeId) ?? modules[0];
-  const centerX = 300;
-  const centerY = 292;
+  const centerX = 310;
+  const centerY = 330;
   const radiusX = 214;
-  const radiusY = 196;
+  const radiusY = 268;
+  const pct = (value: number, total: number) => `${(value / total) * 100}%`;
 
   return (
     <AgentPage
@@ -41,8 +42,8 @@ export function SixModulesPage() {
     >
       <div className="six-main">
         <section className="six-map" aria-label="模块关系图">
-          <svg className="six-links" viewBox="0 0 600 590" aria-hidden="true">
-            <circle cx={centerX} cy={centerY} r="150" fill="none" stroke="#d4e0ee" strokeDasharray="5 7" />
+          <svg className="six-links" viewBox="0 0 620 660" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse cx={centerX} cy={centerY} rx="198" ry="246" fill="none" stroke="#d4e0ee" strokeDasharray="5 7" />
             {modules.map((item, index) => {
               const angle = (-90 + index * 60) * Math.PI / 180;
               const x = centerX + Math.cos(angle) * radiusX;
@@ -64,7 +65,7 @@ export function SixModulesPage() {
                 key={item.id}
                 type="button"
                 className={`six-node${item.id === activeId ? ' is-active' : ''}`}
-                style={{ left: x, top: y }}
+                style={{ left: pct(x, 620), top: pct(y, 660) }}
                 onClick={() => setActiveId(item.id)}
                 aria-pressed={item.id === activeId}
               >
