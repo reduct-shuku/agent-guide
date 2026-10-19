@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon } from '../components/AgentIcons';
 import './PerceptionPage.css';
 
@@ -119,10 +119,6 @@ export function PerceptionPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        感知的产出不是“理解了”，而是一份<strong>可以继续执行、也可以被质疑的结构</strong>；缺失项要么追问，要么带着明确的假设继续。
-      </Takeaway>
     </AgentPage>
   );
 }

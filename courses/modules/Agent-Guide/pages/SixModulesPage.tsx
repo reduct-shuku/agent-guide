@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon, type IconKind } from '../components/AgentIcons';
 import './SixModulesPage.css';
 
@@ -119,10 +119,6 @@ export function SixModulesPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        六个模块围绕同一个目标协作：<strong>感知 → 规划 → 工具 / 记忆 → 执行 → 反思</strong>，再回到下一轮。
-      </Takeaway>
     </AgentPage>
   );
 }

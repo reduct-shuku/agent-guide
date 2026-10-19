@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Switch, Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon, type IconKind } from '../components/AgentIcons';
 import './ModelIsNotAllPage.css';
 
@@ -96,10 +96,6 @@ export function ModelIsNotAllPage() {
           </Typography>
         </div>
       </div>
-
-      <Takeaway>
-        模型负责<strong>决定做什么</strong>，工具、状态与反馈负责<strong>让它做得到、看得见</strong>。缺了后者，再强的模型也只是顾问。
-      </Takeaway>
     </AgentPage>
   );
 }

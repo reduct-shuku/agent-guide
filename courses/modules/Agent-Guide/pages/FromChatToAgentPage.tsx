@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon } from '../components/AgentIcons';
 import './FromChatToAgentPage.css';
 
@@ -139,10 +139,6 @@ export function FromChatToAgentPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        Agent 与聊天机器人的分界线不是“更聪明”，而是<strong>是否进入行动—观察的循环，并对结果负责</strong>。
-      </Takeaway>
     </AgentPage>
   );
 }

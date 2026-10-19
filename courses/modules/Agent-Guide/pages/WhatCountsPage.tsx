@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { RangeControl, Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon, type IconKind } from '../components/AgentIcons';
 import './WhatCountsPage.css';
 
@@ -132,10 +132,6 @@ export function WhatCountsPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        “是不是 Agent”不是一个是非题，而是<strong>目标、环境、自主性</strong>三者的组合；自主性越高，能力越强，代价也越大。
-      </Takeaway>
     </AgentPage>
   );
 }

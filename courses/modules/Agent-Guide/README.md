@@ -20,7 +20,7 @@
 - `AgentGuide.tsx`：Guide 入口，按 1600×900 画布纵向拼接，按容器宽度等比缩放。
 - `AgentPpt.tsx`：SceneDeck 适配器，7 个 scene 与大纲顺序一致。
 - `pages/`：每页的 TSX 与同名 CSS。
-- `components/`：`AgentPage` 公共画布与 `Takeaway`、`Icon` 图标集。
+- `components/`：`AgentPage` 公共画布与 `Icon` 图标集。
 
 页面统一使用 Shared `ContentBlock` 作为标题区，文字通过 `Typography` 渲染，颜色和圆角使用 Shared CSS Token。页面内所有工具调用、检索与指标均为教学模拟，不连接真实模型或外部服务。
 
