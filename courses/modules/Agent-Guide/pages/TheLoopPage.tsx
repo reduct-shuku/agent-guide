@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Typography } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon } from '../components/AgentIcons';
 import './TheLoopPage.css';
 
@@ -165,10 +165,6 @@ export function TheLoopPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        循环必须能停下来。<strong>完成、失败、超出步数或成本上限</strong>，都要有明确的判定，否则 Agent 会一直转下去。
-      </Takeaway>
     </AgentPage>
   );
 }

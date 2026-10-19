@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Typography, ValueTile } from '@shared/react';
-import { AgentPage, Takeaway } from '../components/AgentPage';
+import { AgentPage } from '../components/AgentPage';
 import { Icon } from '../components/AgentIcons';
 import './PlanningPage.css';
 
@@ -126,10 +126,6 @@ export function PlanningPage() {
           </div>
         </section>
       </div>
-
-      <Takeaway>
-        规划的核心不是列清单，而是<strong>写出依赖、识别关键路径、定义完成条件</strong>。能并行的并行，必须串行的不要抢跑。
-      </Takeaway>
     </AgentPage>
   );
 }

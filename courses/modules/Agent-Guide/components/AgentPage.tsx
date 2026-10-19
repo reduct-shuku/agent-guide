@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { ContentBlock, Typography } from '@shared/react';
+import { ContentBlock } from '@shared/react';
 import './AgentPage.css';
 
 export interface AgentPageProps {
@@ -18,14 +18,5 @@ export function AgentPage({ title, subtitle, children, className, contentClassNa
         <div className={`ag-content${contentClassName ? ` ${contentClassName}` : ''}`}>{children}</div>
       </ContentBlock>
     </article>
-  );
-}
-
-export function Takeaway({ label = '本页要点', children }: { label?: string; children: ReactNode }) {
-  return (
-    <div className="ag-takeaway">
-      <Typography as="span" variant="bodySmall" tone="accent" className="ag-takeaway-label">{label}</Typography>
-      <Typography as="span" variant="bodySmall" tone="main" className="ag-takeaway-text">{children}</Typography>
-    </div>
   );
 }
