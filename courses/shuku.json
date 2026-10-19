@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "courseKey": "9b2b0b81-7e47-4dd2-a25b-7b1e802e036b",
+  "name": "agent-guide",
+  "version": "0.1.0",
+  "repository": "https://github.com/reduct-shuku/agent-guide",
+  "ref": "main",
+  "path": ".",
+  "contributing": "CONTRIBUTING.md",
+  "changes": [
+    "首个阶段版本：7 页核心课程，覆盖 Agent 基本概念、六个模块框架、运行闭环，以及感知与规划两个模块页。"
+  ],
+  "title": "Agent概念入门",
+  "description": "介绍Agent的基本概念和基本模块框架。",
+  "category": "人工智能",
+  "repositoryName": "agent-guide",
+  "stageNote": "完成首个阶段版本",
+  "entry": "SKILL.md",
+  "type": "official",
+  "build_profile": "skill",
+  "preview": {
+    "entry": "preview/index.html"
+  },
+  "course_id": "course-e48360cf-332c-4e5d-b281-e6e88afa4af4"
+}

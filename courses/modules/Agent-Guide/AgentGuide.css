@@ -1,0 +1,4 @@
+.ag-guide{display:flex;flex-direction:column;align-items:center;gap:26px;padding:26px 0 56px;background:#e9eef5;min-height:100vh;}
+.ag-guide-frame{width:100%;max-width:1600px;overflow:hidden;}
+.ag-guide-surface{width:1600px;height:900px;transform-origin:top left;}
+.ag-guide-frame>.ag-guide-surface{transition:transform .12s ease;}
