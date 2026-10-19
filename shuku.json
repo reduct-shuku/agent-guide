@@ -11,11 +11,11 @@
   "course_id": "course-e48360cf-332c-4e5d-b281-e6e88afa4af4",
   "name": "agent-guide",
   "type": "official",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "repository": "https://github.com/reduct-shuku/agent-guide",
   "ref": "main",
   "path": "courses",
   "changes": [
-    "完成本次共创"
+    "美化了课程页面"
   ]
 }
