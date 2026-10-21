@@ -8,7 +8,6 @@
   "preview": {
     "entry": "preview/index.html"
   },
-  "course_id": "course-e48360cf-332c-4e5d-b281-e6e88afa4af4",
   "name": "agent-guide",
   "type": "official",
   "version": "1.0.2",
@@ -16,6 +15,8 @@
   "ref": "main",
   "path": ".",
   "changes": [
-    "美化了课程页面"
-  ]
+    "美化了课程页面",
+    "第 5 页模块关系图改为“主循环 + 服务边”"
+  ],
+  "course_id": "course-e48360cf-332c-4e5d-b281-e6e88afa4af4"
 }

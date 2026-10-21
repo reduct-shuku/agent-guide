@@ -1,9 +1,9 @@
-.six-main{display:grid;grid-template-columns:640px minmax(0,1fr);gap:24px;height:100%;min-height:0;}
-.six-map{position:relative;width:620px;height:100%;min-height:0;}
-.six-links{position:absolute;inset:0;width:100%;height:100%;}
-.six-core{position:absolute;left:50%;top:50%;display:grid;place-content:center;justify-items:center;gap:3px;width:158px;height:158px;border-radius:50%;background:linear-gradient(160deg,#fff,#eef5fd);border:2px solid #c9dbee;box-shadow:0 10px 26px rgba(39,68,110,.10);transform:translate(-50%,-50%);text-align:center;z-index:3;}
-.six-core-title{--ui-type-h3-size:24px;}
-.six-node{position:absolute;display:flex;align-items:center;gap:9px;width:172px;padding:9px 11px;border:1px solid #dbe5f1;border-radius:13px;background:#fff;cursor:pointer;font-family:inherit;text-align:left;transform:translate(-50%,-50%);transition:all .16s ease;z-index:2;box-shadow:0 3px 10px rgba(39,68,110,.05);}
+.six-main{display:grid;grid-template-columns:620px minmax(0,1fr);gap:24px;height:100%;min-height:0;}
+.six-map{position:relative;width:620px;height:700px;flex:none;min-height:0;}
+.six-links{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+
+/* 主链步骤模块 */
+.six-node{position:absolute;left:200px;display:flex;align-items:center;gap:10px;width:200px;height:56px;padding:0 12px 0 10px;border:1px solid #dbe5f1;border-radius:13px;background:#fff;cursor:pointer;font-family:inherit;text-align:left;transition:all .16s ease;z-index:2;box-shadow:0 3px 10px rgba(39,68,110,.05);}
 .six-node:hover{border-color:#9fb0c8;}
 .six-node.is-active{border-color:var(--ui-accent);background:linear-gradient(150deg,#f5f9ff,#eaf2fc);box-shadow:0 8px 20px rgba(39,68,110,.13);}
 .six-node-icon{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:10px;background:var(--ui-bg-soft);color:var(--ui-accent);}
@@ -11,6 +11,47 @@
 .six-node-copy{display:grid;gap:0;min-width:0;}
 .six-node-name{--ui-type-body-small-weight:800;}
 .six-node-en{letter-spacing:.02em;--ui-type-body-small-size:11px;}
+
+/* 箭头旁的信息流标签 */
+.six-link-label{position:absolute;left:314px;z-index:2;--ui-type-body-small-size:13px;letter-spacing:.01em;white-space:nowrap;}
+
+/* 记忆：贯穿三个步骤的共享上下文 */
+.six-rail{position:absolute;left:14px;width:140px;display:grid;place-content:center;justify-items:center;gap:2px;padding:14px 10px;border:1px dashed #c3d5e8;border-radius:16px;background:linear-gradient(178deg,#fbfdff,#eef5fd);cursor:pointer;font-family:inherit;text-align:center;transition:all .16s ease;z-index:2;}
+.six-rail:hover{border-color:#9fb0c8;}
+.six-rail.is-active{border-style:solid;border-color:var(--ui-accent);background:linear-gradient(178deg,#f4f9ff,#e6f0fc);box-shadow:0 8px 20px rgba(39,68,110,.12);}
+.six-rail-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#fff;color:var(--ui-accent);box-shadow:0 2px 8px rgba(39,68,110,.06);}
+.six-rail-name{--ui-type-body-size:19px;--ui-type-body-weight:800;color:var(--ui-text-main);}
+.six-rail-en{letter-spacing:.06em;--ui-type-body-small-size:11px;}
+.six-rail-divider{width:34px;height:1px;margin:7px 0 5px;background:#cfe0f0;}
+.six-rail-note{--ui-type-body-small-size:12px;line-height:1.55;color:#7e93aa;white-space:nowrap;}
+
+/* 工具：执行对外的接口 */
+.six-tool{position:absolute;left:14px;width:140px;height:62px;display:flex;align-items:center;gap:9px;padding:0 11px;border:1px dashed #c3d5e8;border-radius:14px;background:#fff;cursor:pointer;font-family:inherit;text-align:left;transition:all .16s ease;z-index:2;}
+.six-tool:hover{border-color:#9fb0c8;}
+.six-tool.is-active{border-style:solid;border-color:var(--ui-accent);background:linear-gradient(150deg,#f5f9ff,#eaf2fc);box-shadow:0 8px 20px rgba(39,68,110,.12);}
+.six-tool-icon{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:10px;background:var(--ui-bg-soft);color:var(--ui-accent);}
+.six-tool.is-active .six-tool-icon{background:var(--ui-accent);color:#fff;}
+.six-world-label{position:absolute;left:14px;top:542px;width:152px;display:grid;gap:1px;}
+.six-world-kicker{--ui-type-body-small-size:11.5px;letter-spacing:.04em;}
+.six-world-list{--ui-type-body-small-size:11.5px;line-height:1.45;color:#a3b5c8;}
+
+/* 输入、出口与退回说明 */
+.six-chip{position:absolute;left:300px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;padding:5px 14px;border-radius:999px;white-space:nowrap;z-index:2;}
+.six-chip-input{top:27px;height:30px;background:#fff;border:1px solid #e2eaf5;}
+.six-chip-output{top:588px;height:32px;background:rgba(59,125,216,.08);border:1px solid rgba(59,125,216,.22);}
+.six-retry-label{position:absolute;left:482px;top:402px;display:grid;gap:1px;width:126px;z-index:2;}
+.six-retry-strong{--ui-type-body-small-size:13px;--ui-type-body-small-weight:800;color:#b45327;}
+
+/* 图例 */
+.six-legend{position:absolute;left:14px;top:648px;display:flex;flex-wrap:wrap;gap:16px;z-index:2;}
+.six-legend-item{display:inline-flex;align-items:center;gap:6px;}
+.six-legend-text{--ui-type-body-small-size:12px;color:#93a7bd;}
+.six-legend-line{display:inline-block;width:26px;height:0;border-top-width:2px;border-top-style:solid;}
+.six-legend-line.is-solid{border-top-color:#7ba4d4;}
+.six-legend-line.is-dash{border-top-style:dashed;border-top-width:1.6px;border-top-color:#b3c6dc;}
+.six-legend-line.is-retry{border-top-style:dashed;border-top-width:1.8px;border-top-color:#c8763f;}
+
+/* 右侧详情面板 */
 .six-detail{display:flex;flex-direction:column;gap:14px;min-height:0;padding:20px 24px;border:1px solid #dbe5f1;border-radius:16px;background:linear-gradient(165deg,#fbfdff,#f3f8fe);}
 .six-detail-head{display:flex;align-items:center;gap:12px;}
 .six-detail-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:13px;background:var(--ui-accent);color:#fff;flex:none;}
